@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    private static Scanner scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
 
         System.out.println("Please select from the following menu:\n" +
                 "0 - convert entered temperature to Fahrenheit\n" +
@@ -31,11 +31,21 @@ public class Main {
     }
 
     public static void toFahrenheit() {
+        int celsius = scanner.nextInt();
+        int fahrenheit = 0;
 
+        fahrenheit = (celsius * (9/5) + 32);
+
+        System.out.println(celsius + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.");
     }
 
     public static void toCelsius() {
+        int fahrenheit = scanner.nextInt();
+        int celsius = 0;
 
+        celsius = ((fahrenheit - 32) * (5/9));
+
+        System.out.println(fahrenheit + " degrees Fahrenheit equals " + celsius + " degrees Celsius.");
     }
 }
 
