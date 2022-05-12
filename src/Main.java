@@ -11,9 +11,11 @@ public class Main {
                 "2 - exit program");
 
         boolean quit = false;
-        int action = scanner.nextInt();
 
-        while(quit) {
+        while(!quit) {
+            int action = scanner.nextInt();
+            scanner.nextLine();
+
            switch(action) {
                case 0:
                    toFahrenheit();
@@ -31,19 +33,15 @@ public class Main {
     }
 
     public static void toFahrenheit() {
-        int celsius = scanner.nextInt();
-        int fahrenheit = 0;
-
-        fahrenheit = (celsius * (9/5) + 32);
+        double celsius = scanner.nextDouble();
+        double fahrenheit = (celsius * (9/5) + 32);
 
         System.out.println(celsius + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.");
     }
 
     public static void toCelsius() {
-        int fahrenheit = scanner.nextInt();
-        int celsius = 0;
-
-        celsius = ((fahrenheit - 32) * (5/9));
+        double fahrenheit = scanner.nextDouble();
+        double celsius = ((fahrenheit - 32) * (5/9));
 
         System.out.println(fahrenheit + " degrees Fahrenheit equals " + celsius + " degrees Celsius.");
     }
