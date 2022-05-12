@@ -33,17 +33,17 @@ public class Main {
     }
 
     public static void toFahrenheit() {
-        double celsius = scanner.nextDouble();
-        double fahrenheit = (celsius * (9/5) + 32);
+        double celsius1 = scanner.nextDouble();
+        double fahrenheit1 = celsius1 * 1.8 + 32.00;
 
-        System.out.println(celsius + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.");
+        System.out.println(celsius1 + " degrees Celsius equals " + fahrenheit1 + " degrees Fahrenheit.");
     }
 
     public static void toCelsius() {
-        double fahrenheit = scanner.nextDouble();
-        double celsius = ((fahrenheit - 32) * (5/9));
+        double fahrenheit2 = scanner.nextDouble();
+        double celsius2 = (fahrenheit2 - 32.00) / 1.8;
 
-        System.out.println(fahrenheit + " degrees Fahrenheit equals " + celsius + " degrees Celsius.");
+        System.out.println(fahrenheit2 + " degrees Fahrenheit equals " + celsius2 + " degrees Celsius.");
     }
 }
 
